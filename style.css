@@ -1,0 +1,302 @@
+/* COLOURS */
+/* .nav{
+    color: #51250C;
+    color: #5F2E11;
+    color: #7C4827;
+    color: #D0955F;
+    color: #EDCBA6;
+    color: #F0D8B8;
+    color: #2E1203;
+} */
+
+*{
+    margin: 0;
+    box-sizing: border-box;
+}
+
+
+/* HEADER */
+
+.logo img{
+    max-width: 150px;
+}
+
+#header{
+    background-color: rgb(240, 216, 184);
+    
+}
+
+.container{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+/* HEADER MENU DESKTOP */
+
+.menu {
+    list-style: none;
+    display: flex;
+    gap: 20px;
+    padding-right: 2rem;
+}
+
+.menu-items a{
+    color: #2E1203;
+    text-decoration-line: none;
+}
+
+a:hover{
+    color: #D0955F;
+}
+
+/* HAMBURGER MENU */
+
+.hamburger img {
+    width: 100%;
+}
+
+.hamburger {
+    display: none; /* det behövs inte visas i desktop version */
+    max-width: 20px;
+}
+
+/* HERO SECTION */
+#hero{
+    width: 100vw;
+    height: 80vh;
+
+    background-image: url("./assets/landing.png");
+    background-position: center;
+    background-size: cover;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding-right: 2rem;
+
+    color: #F0D8B8;
+    gap: 30px;
+}
+
+h1{
+    font-size: 2em;
+}
+
+#hero p{
+    font-size: 1em;
+}
+
+.btn-hero {
+    height: 40px;
+    width: 160px;
+    background-color: #EDCBA6;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 10px;
+    text-decoration: none;
+    color: #51250C;
+    font-weight: bold;
+    font-size: 1em;
+}
+
+/* SECTION MED BÖCKER */
+#catalogue{
+    padding: 3rem 2rem;
+    background-color: #EDCBA6;
+}
+
+.catalogue-title{
+    text-align: center;
+    padding-bottom: 2rem;
+}
+
+/* filtrera böckerna enligt format */
+#filter {
+    margin-bottom: 1rem;
+    border: none;
+    background-color: #F0D8B8;
+}
+
+.books-container{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+    text-align: center;
+    max-width: 1100px;
+    padding: 0 1rem;
+    margin: 0 auto;
+
+}
+
+.book-card {
+    background-color: #5F2E11;
+    color: #F0D8B8;
+    padding: 2rem;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    justify-content: center;
+    align-items: center;
+    min-width: 0;
+}
+
+/* lägg till button */
+.btn-card{
+    width: 100px;
+    background-color: #D0955F;
+    border: none;
+    border-radius: 10px;
+    color: #2E1203;
+    font-weight: bold;
+    padding: 10px;
+    text-align: center;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+.btn-card:hover {
+    color: #EDCBA6;
+}
+
+/* delete (ta bort) button */
+.btn-delete{
+    width: 100px;
+    background-color: #D0955F;
+    border: none;
+    border-radius: 10px;
+    color: #2E1203;
+    font-weight: bold;
+    padding: 10px;
+    text-align: center;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+.btn-delete:hover {
+    color: #EDCBA6;
+}
+
+/* ACTIVE */
+.book-card.active {
+    background-color: #D0955F;
+    color: #51250C;
+}
+
+.book-card.active .btn-card {
+    background-color: #51250C;
+    color: #F0D8B8;
+}
+
+.book-card.active .btn-delete {
+    background-color: #51250C;
+    color: #F0D8B8;
+}
+
+/* FORMULÄR */
+#add-new-book-section{
+    width: 100vw;
+    height: 80vh;
+    background-color: #7C4827;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.new-book-text{
+    text-align: center;
+    color: #EDCBA6;
+}
+
+#add-book-form{
+    display: flex;
+    flex-direction: column;
+    color: #EDCBA6;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+}
+
+input, #format {
+    padding: 7px;
+    margin: 8px 0;
+    display: inline-block;
+    border: 1px solid #2E1203;
+    border-radius: 5px;
+    box-sizing: border-box;
+}
+
+.btn-form{
+    width: 100px;
+    background-color: #D0955F;
+    border: none;
+    border-radius: 10px;
+    color: #2E1203;
+    font-weight: bold;
+    margin-top: 1rem;
+    padding: 10px;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+.btn-form:hover{
+    color: #F0D8B8;
+}
+
+/* FOOTER */
+.footer {
+    width: 100vw;
+    height: 20vh;
+    background-color: #2E1203;
+    color: #F0D8B8;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* MOBIL */
+@media (max-width: 480px) {
+
+    .hamburger {
+        display: block;
+    }
+
+    header {
+        position: relative;
+    }
+
+    .nav {
+        display: none; /*visas inte medan unactive*/
+        position: absolute;
+        top: 100%;
+        background-color: #51250C;
+        width: 100%;
+        padding: 20px;
+    }
+
+    .menu-items a{
+        color: #F0D8B8;
+    }
+
+    a:hover{
+        color: #D0955F;
+    }
+
+    .menu {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .nav.active {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .books-container{
+        display: grid;
+        grid-template-columns: repeat(1, 1fr);
+    }
+}

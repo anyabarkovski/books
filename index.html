@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="sv">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Book Shop</title>
+    <script src="script.js" defer></script>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <header id="header">
+        <div class="container">
+            <a href="#header" class="logo">
+                <img src="./assets/logotyp.png" alt="logotyp">
+            </a>
+            <nav class="nav">
+                <ul class="menu">
+                    <li class="menu-items"><a href="#header">Hem</a></li>
+                    <li class="menu-items"><a href="#catalogue">Böcker</a></li>
+                    <li class="menu-items"><a href="#add-new-book">Lägg till bok</a></li>
+                </ul>
+            </nav>
+            <div class="hamburger">
+                <img src="./assets/menu.png" alt="hamburger menu">
+            </div>
+        </div>
+
+    </header>
+
+    <main>
+
+        <section id="hero">
+
+            <h1>En värld av berättelser väntar</h1>
+            <p>
+                Upptäck böcker att försvinna in i, nya världar
+                att utforska och berättelser att bära med dig länge 
+                after sista sidan
+            </p>
+            <a class="btn-hero" href="#catalogue">Upptäck mer</a>
+
+        </section>
+
+        <section id="catalogue">
+            
+            <h2 class="catalogue-title">Våra nyaste böcker</h2>
+
+            <!-- skapar filter -->
+            <label for="filter">Filtrera: </label>
+            <select name="filter" id="filter">
+                <option value="alla">Alla</option>
+                <option value="pocket">Pocket</option>
+                <option value="storpocket">Storpocket</option>
+                <option value="häftad">Häftad</option>
+                <option value="inbunden">Inbunden</option>
+            </select>
+
+            <div class="books-container"></div>
+
+        </section>
+
+        <!-- form för att lägga till en ny bok -->
+
+        <section id="add-new-book-section">
+            <h2 class="new-book-text">Lägg till en ny bok</h2>
+
+            <form id="add-book-form">
+                <label for="title">Titel: </label>
+                <input type="text" id="title" name="title" placeholder="Heja Pippi!" required>
+
+                <label for="author">Författare: </label>
+                <input type="text" id="author" name="author" placeholder="Astrid Lindgren" required>
+
+                <label for="price">Pris: </label>
+                <input type="number" id="price" name="price" placeholder="89" min="0" required>
+
+                <label for="format">Välj en format:</label>
+                <select name="format" id="format">
+                    <option value="pocket">Pocket</option>
+                    <option value="storpocket">Storpocket</option>
+                    <option value="häftad">Häftad</option>
+                    <option value="inbunden">Inbunden</option>
+                </select>
+                
+                <button class="btn-form" type="submit">Skicka</button>
+
+            </form>
+
+        </section>
+    </main>
+
+    <footer class="footer">
+       <p>&copy; 2026 Book shop</p> 
+    </footer>
+    
+</body>
+</html>
